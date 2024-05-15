@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SensorExample</string>
+    <string name="sensor_values">Sensor Values</string>
+    <string name="light_sensor">Light Sensor \t:\t</string>
+    <string name="scanning">Scanning…</string>
+    <string name="proximity_sensor">Proximity Sensor \t:\t</string>
+    <string name="magnetic_sensor">Magnetic Sensor \t:\t</string>
+    <string name="accelerometer_sensor">Accelerometer Sensor \t:\t</string>
+    <string name="gyroscope_sensor">Gyroscope Sensor \t:\t</string>
+    <string name="game_rotation_vector">Game Rotation Vector \t:\t</string>
+</resources>
