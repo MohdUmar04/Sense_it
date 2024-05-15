@@ -8,4 +8,5 @@
     <string name="accelerometer_sensor">Accelerometer Sensor \t:\t</string>
     <string name="gyroscope_sensor">Gyroscope Sensor \t:\t</string>
     <string name="game_rotation_vector">Game Rotation Vector \t:\t</string>
+    <string name="not_available">Currently Not Available</string>
 </resources>

@@ -5,7 +5,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 sensorManager.registerListener(this,lightSensor ,SensorManager.SENSOR_DELAY_NORMAL);
             }
             else{
+                ((TextView)(findViewById(R.id.valueLight))).setText(R.string.not_available);
                 Toast.makeText(this, "Light Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 sensorManager.registerListener(this, accSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
             else{
+                ((TextView)(findViewById(R.id.valueAccelerometer_x))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.valueAccelerometer_y))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.valueAccelerometer_z))).setText(R.string.not_available);
                 Toast.makeText(this, "Accelerometer Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
@@ -50,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 sensorManager.registerListener(this, gyroSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
             else{
+                ((TextView)(findViewById(R.id.valueGyroscope_x))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.valueGyroscope_y))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.valueGyroscope_z))).setText(R.string.not_available);
                 Toast.makeText(this, "Gyroscope Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
@@ -58,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 sensorManager.registerListener(this, proxSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
             else{
+                ((TextView)(findViewById(R.id.valueProximity))).setText(R.string.not_available);
                 Toast.makeText(this, "Proximity Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
@@ -66,6 +73,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 sensorManager.registerListener(this, gameRotationSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
             else{
+                ((TextView)(findViewById(R.id.value_game_rotation_vector_w))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.value_game_rotation_vector_x))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.value_game_rotation_vector_y))).setText(R.string.not_available);
+                ((TextView)(findViewById(R.id.value_game_rotation_vector_z))).setText(R.string.not_available);
                 Toast.makeText(this, "Game Rotation Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
