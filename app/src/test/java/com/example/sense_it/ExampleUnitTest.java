@@ -1,4 +1,4 @@
-package com.example.sensorexample;
+package com.example.sense_it;
 
 import org.junit.Test;
 

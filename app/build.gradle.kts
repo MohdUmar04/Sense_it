@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sensorexample"
+    namespace = "com.example.sense_it"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.sensorexample"
+        applicationId = "com.example.sense_it"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

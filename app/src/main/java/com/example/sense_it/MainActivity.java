@@ -1,4 +1,4 @@
-package com.example.sensorexample;
+package com.example.sense_it;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -9,7 +9,6 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -90,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
 
         if(event.sensor.getType() == Sensor.TYPE_GAME_ROTATION_VECTOR){
-            Log.d("TAG", "onSensorChanged: " + event.values.length);
             ((TextView)(findViewById(R.id.value_game_rotation_vector_w))).setText(String.format("w = %s" , event.values[0]));
             ((TextView)(findViewById(R.id.value_game_rotation_vector_x))).setText(String.format("x = %s" , event.values[1]));
             ((TextView)(findViewById(R.id.value_game_rotation_vector_y))).setText(String.format("y = %s" , event.values[2]));
