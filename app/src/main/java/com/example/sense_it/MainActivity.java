@@ -33,27 +33,32 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             if(lightSensor != null){
                 sensorManager.registerListener(this,lightSensor ,SensorManager.SENSOR_DELAY_NORMAL);
             }
+            else{
+                Toast.makeText(this, "Light Sensor not Found", Toast.LENGTH_SHORT).show();
+            }
 
             Sensor accSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
             if(accSensor != null) {
                 sensorManager.registerListener(this, accSensor, SensorManager.SENSOR_DELAY_NORMAL);
+            }
+            else{
+                Toast.makeText(this, "Accelerometer Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
             Sensor gyroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
             if(gyroSensor != null) {
                 sensorManager.registerListener(this, gyroSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
-
-            Sensor tempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
-            if(tempSensor != null) {
-                sensorManager.registerListener(this, tempSensor, SensorManager.SENSOR_DELAY_NORMAL);
+            else{
+                Toast.makeText(this, "Gyroscope Sensor not Found", Toast.LENGTH_SHORT).show();
             }
+
             Sensor proxSensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
             if(proxSensor != null) {
                 sensorManager.registerListener(this, proxSensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
             else{
-                Toast.makeText(this, "proxy_Sensor not Found", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Proximity Sensor not Found", Toast.LENGTH_SHORT).show();
             }
 
             Sensor gameRotationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR);
